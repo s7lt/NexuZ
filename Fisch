@@ -1,8 +1,11 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "NexuZ", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZTest"})
+local Window = OrionLib:MakeWindow({Name = "NexuZ Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZTest"})
 
 local plr = game.Players.LocalPlayer
+
+_G.Key = "Test2323"
+_G.KeyInput = "String"
 
 OrionLib:MakeNotification({
 	Name = "Logged in as "..plr.Name,
@@ -17,13 +20,51 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Tab:AddTextbox({
+	Name = "Test",
+	Default = "Type The Key 🔑",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+
+Tab:AddButton({ 
+	Name = "Verify ✅",
+	Callback = function()
+      	if _G.KeyInput == _G.Key then
+            MakeScriptHub()
+            CorrectKeyNotif()
+        else
+            InCorrectKeyNotif()
+        end
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Infos 📘",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 Tab:AddLabel("Username : "..plr.Name)
 
+function CorrectKeyNotif()
     OrionLib:MakeNotification({
-        Name = "Script Loading...",
-        Content = "Accesing Script Now.",
+        Name = "Loading Script...",
+        Content = "Correct Key",
         Image = "rbxassetid://4483345998",
         Time = 5
+    })
+end
+
+function InCorrectKeyNotif()
+    OrionLib:MakeNotification({
+        Name = "Wrong Key ❌",
+        Content = "You typed the Wrong Key ❌",
+        Image = "rbxassetid://4483345998",
+        Time = 4
     })
 end
 
@@ -34,16 +75,16 @@ function MakeScriptHub()
 
 	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-	local Window = OrionLib:MakeWindow({Name = "NexuZ Fisch", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZ Unlocked ✅"})
+	local Window = OrionLib:MakeWindow({Name = "NexuZ Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZ Unlocked ✅"})
 
 	local Tab = Window:MakeTab({
-        Name = "NexuZ Fisch",
+        Name = "Test",
         Icon = "rbxassetid://4483345998",
         PremiumOnly = false
     })
 
 	Tab:AddToggle({
-		Name = "Test",
+		Name = "Enable Inf Money 💸",
 		Default = false,
 		Callback = function(Value)
 			infMoneyEnabled = Value
