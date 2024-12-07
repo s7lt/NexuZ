@@ -28,6 +28,17 @@ Tab:AddButton({
 	Name = "Auto Shake",
 })
 
+Tab:AddButton({ 
+	Name = "Auto Reel",
+})
+
+Tab:AddButton({ 
+	Name = "Auto Balance Nuke",
+})
+
+Tab:AddButton({ 
+	Name = "Freeze Character",
+})
 
 local Tab = Window:MakeTab({
 	Name = "Legit",
@@ -35,7 +46,9 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddLabel("Username : "..plr.Name)
+Tab:AddButton({ 
+	Name = "Freeze Character",
+})
 
 local Tab = Window:MakeTab({
 	Name = "Zone Cast",
