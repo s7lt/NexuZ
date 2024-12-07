@@ -15,7 +15,7 @@ OrionLib:MakeNotification({
 })
 
 local Tab = Window:MakeTab({
-	Name = "NexuZ Fisch",
+	Name = "Main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -30,12 +30,18 @@ Tab:AddButton({
 
 
 local Tab = Window:MakeTab({
-	Name = "Infos :blue_book:",
+	Name = "Legit",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Tab:AddLabel("Username : "..plr.Name)
+
+local Tab = Window:MakeTab({
+	Name = "Zone Cast",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
 function CorrectKeyNotif()
     OrionLib:MakeNotification({
