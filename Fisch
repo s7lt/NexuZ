@@ -1,0 +1,67 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "NexuZ", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZTest"})
+
+local plr = game.Players.LocalPlayer
+
+OrionLib:MakeNotification({
+	Name = "Logged in as "..plr.Name,
+	Content = "Welcome to our new script "..plr.Name,
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "NexuZ Fisch",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Username : "..plr.Name)
+
+    OrionLib:MakeNotification({
+        Name = "Script Loading...",
+        Content = "Accesing Script Now.",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+end
+
+function MakeScriptHub()
+
+	local infMoneyEnabled = false
+
+
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+	local Window = OrionLib:MakeWindow({Name = "NexuZ Fisch", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZ Unlocked ✅"})
+
+	local Tab = Window:MakeTab({
+        Name = "NexuZ Fisch",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+	Tab:AddToggle({
+		Name = "Test",
+		Default = false,
+		Callback = function(Value)
+			infMoneyEnabled = Value
+		
+			if infMoneyEnabled then
+	
+				spawn(function()
+					while infMoneyEnabled do
+	
+						game:GetService("ReplicatedStorage").RewardEvents.GiveReward:FireServer("5")
+						
+	
+						wait(0.1)
+					end
+				end)
+			end
+		end
+	})
+	
+
+end
