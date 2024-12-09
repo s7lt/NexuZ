@@ -1,123 +1,58 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+if getgenv().NexuZ then warn("NexuZ Hub : Already executed!") return end
+getgenv().NexuZ = true
+
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
-local Window = Fluent:CreateWindow({
-    Title = game:GetService("MarketplaceService"):GetProductInfo(16732694052).Name .." | NexuZ - Premium",
-    SubTitle = "discord.gg/VK69Dtj6BQ",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
---local Window = OrionLib:MakeWindow({Name = "NexuZ Hub - discord.gg/52xWWEfvaJ", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZTest"})
+local DeviceType = game:GetService("UserInputService").TouchEnabled and "Mobile" or "PC"
+if DeviceType == "Mobile" then
+    local ClickButton = Instance.new("ScreenGui")
+    local MainFrame = Instance.new("Frame")
+    local ImageLabel = Instance.new("ImageLabel")
+    local TextButton = Instance.new("TextButton")
+    local UICorner = Instance.new("UICorner")
+    local UICorner_2 = Instance.new("UICorner")
 
-local plr = game.Players.LocalPlayer
+    ClickButton.Name = "ClickButton"
+    ClickButton.Parent = game.CoreGui
+    ClickButton.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-_G.Key = "Test2323"
-_G.KeyInput = "String"
+    MainFrame.Name = "MainFrame"
+    MainFrame.Parent = ClickButton
+    MainFrame.AnchorPoint = Vector2.new(1, 0)
+    MainFrame.BackgroundTransparency = 0.8
+    MainFrame.BackgroundColor3 = Color3.fromRGB(38, 38, 38) 
+    MainFrame.BorderSizePixel = 0
+    MainFrame.Position = UDim2.new(1, -60, 0, 10)
+    MainFrame.Size = UDim2.new(0, 45, 0, 45)
 
-OrionLib:MakeNotification({
-	Name = "Logged in as "..plr.Name,
-	Content = "Welcome to our script "..plr.Name,
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
+    UICorner.CornerRadius = UDim.new(1, 0)
+    UICorner.Parent = MainFrame
 
-local Tab = Window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+    UICorner_2.CornerRadius = UDim.new(0, 10)
+    UICorner_2.Parent = ImageLabel
 
-Tab:AddButton({
-	Name = "Auto Cast",        
-})
+    ImageLabel.Parent = MainFrame
+    ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    ImageLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+    ImageLabel.BorderSizePixel = 0
+    ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+    ImageLabel.Size = UDim2.new(0, 45, 0, 45)
+    ImageLabel.Image = "rbxassetid://"
 
-Tab:AddButton({ 
-	Name = "Auto Shake",
-})
-
-Tab:AddButton({ 
-	Name = "Auto Reel",
-})
-
-Tab:AddButton({ 
-	Name = "Auto Balance Nuke",
-})
-
-Tab:AddButton({ 
-	Name = "Freeze Character",
-})
-
-local Tab = Window:MakeTab({
-	Name = "Legit",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab:AddButton({ 
-	Name = "Freeze Character",
-})
-
-local Tab = Window:MakeTab({
-	Name = "Zone Cast",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-function CorrectKeyNotif()
-    OrionLib:MakeNotification({
-        Name = "Loading Script...",
-        Content = "Correct Key",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-    })
-end
-
-function InCorrectKeyNotif()
-    OrionLib:MakeNotification({
-        Name = "Wrong Key :x:",
-        Content = "You typed the Wrong Key :x:",
-        Image = "rbxassetid://4483345998",
-        Time = 4
-    })
-end
-
-function MakeScriptHub()
-
-	local infMoneyEnabled = false
-
-
-	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-
-	local Window = OrionLib:MakeWindow({Name = "NexuZ Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZ Unlocked ✅"})
-
-	local Tab = Window:MakeTab({
-        Name = "Test",
-        Icon = "rbxassetid://4483345998",
-        PremiumOnly = false
-    })
-
-	Tab:AddToggle({
-		Name = "Enable Inf Money 💸",
-		Default = false,
-		Callback = function(Value)
-			infMoneyEnabled = Value
-		
-			if infMoneyEnabled then
-	
-				spawn(function()
-					while infMoneyEnabled do
-	
-						game:GetService("ReplicatedStorage").RewardEvents.GiveReward:FireServer("5")
-						
-	
-						wait(0.1)
-					end
-				end)
-			end
-		end
-	})
-	
-
-end
+    TextButton.Parent = MainFrame
+    TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+    TextButton.BackgroundTransparency = 1
+    TextButton.BorderSizePixel = 0
+    TextButton.Position = UDim2.new(0, 0, 0, 0)
+    TextButton.Size = UDim2.new(0, 45, 0, 45)
+    TextButton.AutoButtonColor = false
+    TextButton.Font = Enum.Font.SourceSans
+    TextButton.Text = "Open"
+    TextButton.TextColor3 = Color3.new(220, 125, 255)
+    TextButton.TextSize = 20
