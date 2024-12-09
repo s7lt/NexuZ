@@ -1,5 +1,5 @@
-if getgenv().cuppink then warn("CupPibk Hub : Already executed!") return end
-getgenv().cuppink = true
+if getgenv().NexuZ then warn("NexuZ Hub : Already executed!") return end
+getgenv().NexuZ = true
 
 if not game:IsLoaded() then
     game.Loaded:Wait()
@@ -64,7 +64,7 @@ if DeviceType == "Mobile" then
 end
 
 local Window = Fluent:CreateWindow({
-    Title = game:GetService("MarketplaceService"):GetProductInfo(16732694052).Name .." | CupPink - Premium",
+    Title = game:GetService("MarketplaceService"):GetProductInfo(16732694052).Name .." | NexuZ - Premium",
     SubTitle = "discord.gg/25ms)",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
@@ -119,7 +119,7 @@ local RunCount = false
 -- // // // Functions // // // --
 function ShowNotification(String)
     Fluent:Notify({
-        Title = "CupPink Hub",
+        Title = "NexuZ Hub",
         Content = String,
         Duration = 5
     })
@@ -1073,7 +1073,7 @@ end
 
 Window:SelectTab(1)
 Fluent:Notify({
-    Title = "CupPink",
+    Title = "NexuZ",
     Content = "Executed!",
     Duration = 8
 })
