@@ -11,7 +11,7 @@ local v127 =
         ["SubTitle"] = "by s7lt",
         ["TabWidth"] = 588 - 428,
         ["Size"] = UDim2.fromOffset(580, 280 + 180),
-        ["Acrylic"] = true,
+        ["Acrylic"] = false,
         ["Theme"] = "Dark",
         ["MinimizeKey"] = Enum.KeyCode.LeftControl
     }
