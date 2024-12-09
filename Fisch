@@ -1,7 +1,15 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
-local Window = OrionLib:MakeWindow({Name = "NexuZ Hub - discord.gg/52xWWEfvaJ", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZTest"})
+local Window = Fluent:CreateWindow({
+    Title = game:GetService("MarketplaceService"):GetProductInfo(16732694052).Name .." | NexuZ - Premium",
+    SubTitle = "discord.gg/VK69Dtj6BQ",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Amethyst",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+--local Window = OrionLib:MakeWindow({Name = "NexuZ Hub - discord.gg/52xWWEfvaJ", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZTest"})
 
 local plr = game.Players.LocalPlayer
 
