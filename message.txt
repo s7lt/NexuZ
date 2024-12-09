@@ -134,7 +134,7 @@ checkKeyButton.MouseButton1Click:Connect(function()
         corkey()
         wait(1)
         uiScreen:Destroy()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/s7lt/NexuZ/refs/heads/main/Fisch%20S?token=GHSAT0AAAAAAC3SDODWR2XWBYAKDRN47U5QZ2WH73A"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/s7lt/NexuZ/refs/heads/main/Fisch%20S?token=GHSAT0AAAAAAC3SDODXPX4KYZOP4NDJRIUQZ2WIOLQ"))()
     else
         keyInputBox.PlaceholderText = "Invalid key. Try again."
         invkey()
