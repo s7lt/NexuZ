@@ -555,7 +555,7 @@ do
         Title = "Copy Discord link",
         Description = "Join our main discord!",
         Callback = function()
-            setclipboard("https://discord.gg/25ms")
+            setclipboard("https://discord.gg/VK69Dtj6BQ")
         end
     })
 
