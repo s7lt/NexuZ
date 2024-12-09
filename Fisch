@@ -1,4 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = OrionLib:MakeWindow({Name = "NexuZ Hub - discord.gg/52xWWEfvaJ", HidePremium = false, SaveConfig = true, ConfigFolder = "NexuZTest"})
 
