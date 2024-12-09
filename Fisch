@@ -192,7 +192,7 @@ local function autoCast()
 end
 
 -- // // // Auto Shake // // // --
-local autoShakeEnabled = false
+local autoShakeEnabled = true
 local autoShakeConnection
 local function autoShake()
     if ShakeMode == "Navigation" then
@@ -257,7 +257,7 @@ if autoShakeEnabled and PlayerGui:FindFirstChild("shakeui") and PlayerGui.shakeu
 end
 
 -- // // // Auto Reel // // // --
-local autoReelEnabled = false
+local autoReelEnabled = true
 local PerfectCatchEnabled = false
 local autoReelConnection
 local function autoReel()
