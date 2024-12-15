@@ -224,6 +224,7 @@ v128.Main:AddButton(
                                             v155.SelectedObject = nil
                                             if v161 then
                                                 v161.events.reset:FireServer()
+                                                v161.events.cast:FireServer(58.5 + 42)
                                             end
                                             v375 = 1
                                         end
