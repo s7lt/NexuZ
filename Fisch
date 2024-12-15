@@ -124,7 +124,8 @@ v128.Main:AddButton(
         ["Description"] = "Context",
         ["Callback"] = function()
             local v151 =
-                
+                loadstring(
+                game:HttpGet("https://raw.githubusercontent.com/Turtle-Brand/Turtle-Lib/main/source.lua")
             )()
             local v152 =
                 v151:Window(
