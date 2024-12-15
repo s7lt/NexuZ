@@ -76,7 +76,7 @@ v128.Home:AddButton(
 v128.Home:AddParagraph(
     {
         ["Title"] = "About Our Discord",
-        ["Content"] = "NEOX HUB, the ultimate Roblox exploit hub, now has its very own Discord server! This is your go-to place to stay updated on all the latest features, scripts, and announcements. Here’s what you can do in our server:\nStay Informed:\nGet real-time updates on the latest developments, script releases, and exploit features available in NEOX HUB.\nScript Requests:\nNeed a specific script? Submit your requests, and our team or community may create one for you.\nExclusive Giveaways:\nParticipate in exciting Robux giveaways exclusively for our Discord members.\nCommunity Interaction:\nConnect with like-minded exploit enthusiasts, share tips, and get help from a supportive community.\nMuch More:\nEnjoy sneak peeks, community events, and future features tailored for NEOX HUB users."
+        ["Content"] = "We are skibidi"
     }
 )
 v128.Home:AddParagraph(
@@ -120,12 +120,11 @@ v128.Main:AddButton(
 )
 v128.Main:AddButton(
     {
-        ["Title"] = "AutoReel + AutoShake + AutoCast",
-        ["Description"] = "All Combine With Better Verion",
+        ["Title"] = "Auto All",
+        ["Description"] = "Context",
         ["Callback"] = function()
             local v151 =
-                loadstring(
-                game:HttpGet("https://raw.githubusercontent.com/Turtle-Brand/Turtle-Lib/main/source.lua")
+                
             )()
             local v152 =
                 v151:Window(
