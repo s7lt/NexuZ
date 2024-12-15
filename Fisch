@@ -76,7 +76,7 @@ v128.Home:AddButton(
 v128.Home:AddParagraph(
     {
         ["Title"] = "About Our Discord",
-        ["Content"] = "We are skibidi"
+        ["Content"] = "We are skibidi, discord disbanded "
     }
 )
 v128.Home:AddParagraph(
